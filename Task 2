@@ -1,0 +1,45 @@
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Declare variables
+    string studentName;
+    int age;
+    double examScore;
+
+    // Enter student details
+    cout << "Enter student name: ";
+    getline(cin, studentName);
+
+    cout << "Enter student age: ";
+    cin >> age;
+
+    cout << "Enter exam score: ";
+    cin >> examScore;
+
+    // Determine admission using nested if statements
+    cout << "\n================================\n";
+    cout << "       RUIRU COLLEGE\n";
+    cout << "      ADMISSION RESULTS\n";
+    cout << "================================\n";
+
+    cout << "Student Name: " << studentName << endl;
+    cout << "Age:          " << age << endl;
+    cout << "Exam Score:   " << examScore << endl;
+
+    if (age >= 18) {
+        if (examScore >= 50) {
+            cout << "Decision: Admitted" << endl;
+        } else {
+            cout << "Decision: Not Admitted: Low Score" << endl;
+        }
+    } else {
+        cout << "Decision: Not Admitted: Underage" << endl;
+    }
+
+    cout << "================================\n";
+
+    return 0;
+}
